@@ -1,4 +1,0 @@
-# base36 extension 
-comment = 'base36 datatype'
-default-version = '0.0.1'
-relocatable = true
