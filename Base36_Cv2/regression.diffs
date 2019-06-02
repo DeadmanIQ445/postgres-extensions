@@ -1,0 +1,76 @@
+*** /home/deadmaniq445/postgres-extensions/Base36_Cv2/expected/base36_test.out	2019-05-24 09:43:16.931815000 +0300
+--- /home/deadmaniq445/postgres-extensions/Base36_Cv2/results/base36_test.out	2019-05-25 13:30:44.704787609 +0300
+***************
+*** 1,37 ****
+  CREATE EXTENSION base36;
+  SELECT base36_encode(0);
+!  base36_encode 
+! ---------------
+!  0
+! (1 row)
+! 
+  SELECT base36_encode(1);
+!  base36_encode 
+! ---------------
+!  1
+! (1 row)
+! 
+  SELECT base36_encode(10);
+!  base36_encode 
+! ---------------
+!  a
+! (1 row)
+! 
+  SELECT base36_encode(35);
+!  base36_encode 
+! ---------------
+!  z
+! (1 row)
+! 
+  SELECT base36_encode(36);
+!  base36_encode 
+! ---------------
+!  10
+! (1 row)
+! 
+  SELECT base36_encode(123456789);
+!  base36_encode 
+! ---------------
+!  21i3v9
+! (1 row)
+! 
+--- 1,31 ----
+  CREATE EXTENSION base36;
+  SELECT base36_encode(0);
+! ERROR:  function base36_encode(integer) does not exist
+! LINE 1: SELECT base36_encode(0);
+!                ^
+! HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  SELECT base36_encode(1);
+! ERROR:  function base36_encode(integer) does not exist
+! LINE 1: SELECT base36_encode(1);
+!                ^
+! HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  SELECT base36_encode(10);
+! ERROR:  function base36_encode(integer) does not exist
+! LINE 1: SELECT base36_encode(10);
+!                ^
+! HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  SELECT base36_encode(35);
+! ERROR:  function base36_encode(integer) does not exist
+! LINE 1: SELECT base36_encode(35);
+!                ^
+! HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  SELECT base36_encode(36);
+! ERROR:  function base36_encode(integer) does not exist
+! LINE 1: SELECT base36_encode(36);
+!                ^
+! HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  SELECT base36_encode(123456789);
+! ERROR:  function base36_encode(integer) does not exist
+! LINE 1: SELECT base36_encode(123456789);
+!                ^
+! HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+======================================================================
+
