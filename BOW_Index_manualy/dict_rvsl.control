@@ -1,0 +1,5 @@
+# dict_rvsl extension
+comment = 'filtering only given words'
+default_version = '1.0'
+module_pathname = '$libdir/dict_rvsl'
+relocatable = true
